@@ -15,7 +15,7 @@ Array.prototype.peek = function() {
     return this[this.length-1];
 }
 
-$.get('https://raw.githubusercontent.com/Apostolique/Agar.io-bot/master/launcher.user.js?1', function(data) {
+$.get('https://raw.githubusercontent.com/bdero/Agar.io-bot/master/launcher.user.js?1', function(data) {
 	var latestVersion = data.replace(/(\r\n|\n|\r)/gm,"");
 	latestVersion = latestVersion.substring(latestVersion.indexOf("// @version")+11,latestVersion.indexOf("// @grant"));
     
@@ -25,7 +25,7 @@ $.get('https://raw.githubusercontent.com/Apostolique/Agar.io-bot/master/launcher
 	if(latestVersion > myVersion)
 	{
 		alert("Update Available for launcher.user.js: V" + latestVersion + "\nGet the latest version from the GitHub page.");
-        window.open('https://github.com/Apostolique/Agar.io-bot/blob/master/launcher.user.js','_blank');
+        window.open('https://github.com/bdero/Agar.io-bot/blob/master/launcher.user.js','_blank');
 	}
 	console.log('Current launcher.user.js Version: ' + myVersion + " on Github: " + latestVersion);
 });
@@ -1817,10 +1817,3 @@ console.log("Running Bot Launcher!");
     h.onload = Sa
   }
 }) (window, window.jQuery);
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','apos');
-
-apos('create', 'UA-64394184-1', 'auto');
